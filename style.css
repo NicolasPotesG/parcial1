@@ -1,0 +1,7 @@
+#h1Header {
+  font-family: "Satisfy", cursive;
+}
+
+nav a:hover {
+  cursor: pointer;
+}

@@ -35,97 +35,146 @@
     ></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container-fluid">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <h1 id="h1Header">Restaurant & Lounge</h1>
-          </ul>
-          <div class="form-inline my-2 my-lg-0">
-            <img
-              id="img-carrito"
-              src="https://i.imgur.com/1EKrQIi.png"
-              alt="carrito"
-              width="50"
-              height="50"
-            />
-            <p>2 Items</p>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li id="h1Header">Restaurant & Lounge</li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <img
+                id="imgShoppingCart"
+                src="https://i.imgur.com/1EKrQIi.png"
+                alt="carrito"
+                width="50"
+                height="50"
+              />
+              <p id="numItemSC">0 items</p>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <hr />
-    <br />
-    <!---------------------banner-------------------------->
+        </nav>
+      </header>
+      <hr />
+      <br />
+    </div>
+    <!--banner-->
     <section id="banner">
-      <div class="container align-items-center">
+      <div class="container-fluid align-items-center">
         <div class="row">
           <div class="col-12">
             <img
               class="img-fluid"
               src="https://i.imgur.com/S8Ffdqa.png"
               alt="imgBanner"
+              id="imgBanner"
             />
           </div>
         </div>
       </div>
     </section>
-    <hr />
-    <!---------------------navbar-------------------------->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" id="burgers">Burgers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="tacos">Tacos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="salads">Salads</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="desserts">Desserts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="drinks">Drinks & Slides</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--main-->
-    <hr />
-    <main>
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-12" id="main"></div>
+    <!--navbar-->
+    <div class="container-fluid">
+      <hr />
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="burgers">Burgers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tacos">Tacos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="salads">Salads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="desserts">Desserts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="drinks">Drinks & Slides</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--main-->
+      <main>
+        <hr />
+        <h1 class="text-center" id="titleItem"></h1>
+        <hr />
+        <div id="main"></div>
+      </main>
+      <br />
+      <hr />
+      <!--footer-->
+      <footer>
+        <p class="text-center">
+          Contact us: +57 3102105253 - info@restaurant.com - @restaurant
+        </p>
+      </footer>
+      <!--modal-->
+      <div class="modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cancel the order</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure about cancelling the order?</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                id="cancelOrder"
+                type="button"
+                class="btn btn-light"
+                data-dismiss="modal"
+              >
+                Yes, i want to cancel the order
+              </button>
+              <button
+                data-toggle="modal"
+                data-target="#modal"
+                type="button"
+                class="btn btn-danger"
+              >
+                No, I want to continue adding products
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
-    <hr />
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

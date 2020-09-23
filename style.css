@@ -1,7 +1,16 @@
 #h1Header {
   font-family: "Satisfy", cursive;
+  font-size: 3rem;
 }
 
 nav a:hover {
   cursor: pointer;
+}
+
+#imgShoppingCart {
+  cursor: pointer;
+}
+
+#imgBanner {
+  width: 100%;
 }
